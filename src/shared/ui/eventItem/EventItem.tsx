@@ -1,4 +1,4 @@
-import { EventData, EventDescription } from "./EventItem.styled."
+import { EventData, EventDescription, EventItemConteiner } from "./EventItem.styled."
 
 type TEventItem = {
     data: number,
@@ -8,9 +8,9 @@ type TEventItem = {
 export const EventItem: React.FC <TEventItem> = ({data, description}) => {
 
     return (
-        <div>
+        <EventItemConteiner>
         <EventData>{data}</EventData>
         <EventDescription>{description}</EventDescription>
-        </div>
+        </EventItemConteiner>
     )
 }
