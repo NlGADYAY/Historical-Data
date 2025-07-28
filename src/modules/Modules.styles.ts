@@ -2,13 +2,12 @@ import styled from "styled-components";
 
 export const Main = styled.div`
   margin-inline: 220px;
-  height: auto;
+  height: 1000px;
   width: 1440px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  overflow: hidden; 
   border-inline: 1px solid #ccc;
 `;
 
@@ -22,6 +21,8 @@ export const FooterContainer = styled.div`
   display: flex;
   gap: 16px;
   z-index: 1;
+  position: relative;
+  width: 100%;
 `;
 
 export const PeriodsContainer = styled.div`

@@ -4,8 +4,7 @@ export const CircleContainer = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  pointer-events: none; 
-  
+  pointer-events: none;
 `;
 
 export const Circle = styled.div`
@@ -20,7 +19,7 @@ export const Circle = styled.div`
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     background-color: #ccc;
   }
@@ -44,5 +43,11 @@ export const Circle = styled.div`
   }
 `;
 
-
-
+export const Dot = styled.div`
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #42567a;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+`;

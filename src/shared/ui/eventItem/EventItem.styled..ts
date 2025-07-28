@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const EventItemConteiner = styled.div`
-    width: 320px;
+    min-width: 350px;
 `
 
 export const EventData = styled.div`

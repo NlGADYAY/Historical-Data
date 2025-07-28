@@ -1,11 +1,10 @@
 import { CircleLines } from "../../shared/ui/circleWithLines"
 import { Periods } from "../../shared/ui/periods"
 import { TitleHistoricalData } from "../../shared/ui/titleHistoricalData"
-import { FooterContainer,  Main, MainContainer, PeriodsContainer } from "./Technologies.styles"
-import { TechnologiesEventList } from "./TechnologiesEventList"
+import { Main, MainContainer, PeriodsContainer, FooterContainer } from "../Modules.styles"
+import { SportEventList } from "./SporteventList"
 
-export const Technologies: React.FC = () => {
-
+export const Sport: React.FC = () => {
 
     return (
         <Main>
@@ -17,7 +16,7 @@ export const Technologies: React.FC = () => {
                 </PeriodsContainer>
             </MainContainer>
             <FooterContainer>
-            <TechnologiesEventList />
+                <SportEventList /> 
             </FooterContainer>
         </Main>
     )
