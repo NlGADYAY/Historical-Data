@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { EventItem } from "../../shared/ui/eventItem";
+import { EventItem } from "../../shared/ui/EventItem";
 import {
   Wrapper,
   ScrollButtonLeft,
@@ -87,7 +87,7 @@ export const TechnologiesEventList: React.FC = () => {
 
   const scroll = (direction: "left" | "right") => {
     ref.current?.scrollBy({
-      left: direction === "left" ? -300 : 300,
+      left: direction === "left" ? -350 : 350,
       behavior: "smooth",
     });
   };

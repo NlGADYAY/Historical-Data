@@ -2,7 +2,7 @@ import {
   EventData,
   EventDescription,
   EventItemConteiner,
-} from "./EventItem.styled.";
+} from "./EventItem.styled";
 
 type TEventItem = {
   data: number;

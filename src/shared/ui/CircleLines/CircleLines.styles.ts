@@ -4,7 +4,6 @@ export const CircleContainer = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  pointer-events: none;
 `;
 
 export const Circle = styled.div`
@@ -12,10 +11,11 @@ export const Circle = styled.div`
   height: 530px;
   border-radius: 50%;
   border: 1px solid #ccc;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transform-origin: center center;
 
   &::before,
   &::after {

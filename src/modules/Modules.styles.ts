@@ -12,7 +12,7 @@ export const Main = styled.div`
 `;
 
 export const MainContainer = styled.div`
-  height: 800px;
+  height: 800px;  
   width: 100%;
   z-index: 1;
 `;
@@ -21,8 +21,6 @@ export const FooterContainer = styled.div`
   display: flex;
   gap: 16px;
   z-index: 1;
-  position: relative;
-  width: 100%;
 `;
 
 export const PeriodsContainer = styled.div`

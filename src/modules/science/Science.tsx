@@ -1,10 +1,10 @@
-import { CircleLines } from "../../shared/ui/circleWithLines"
-import { Periods } from "../../shared/ui/periods"
-import { TitleHistoricalData } from "../../shared/ui/titleHistoricalData"
+import { CircleLines } from "../../shared/ui/CircleLines"
+import { Periods } from "../../shared/ui/Periods"
+import { TitleHistoricalData } from "../../shared/ui/TitleHistoricalData"
 import { Main, MainContainer, PeriodsContainer, FooterContainer } from "../Modules.styles"
-import { KinoEventList } from "./KinoEventList"
+import { ScienceventList } from "./ScienceEventList"
 
-export const Kino: React.FC = () => {
+export const Science: React.FC = () => {
 
     return (
         <Main>
@@ -16,7 +16,7 @@ export const Kino: React.FC = () => {
                 </PeriodsContainer>
             </MainContainer>
             <FooterContainer>
-                <KinoEventList />
+                <ScienceventList /> 
             </FooterContainer>
         </Main>
     )

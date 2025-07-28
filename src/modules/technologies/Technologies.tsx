@@ -1,6 +1,6 @@
-import { CircleLines } from "../../shared/ui/circleWithLines"
-import { Periods } from "../../shared/ui/periods"
-import { TitleHistoricalData } from "../../shared/ui/titleHistoricalData"
+import { CircleLines } from "../../shared/ui/CircleLines"
+import { Periods } from "../../shared/ui/Periods"
+import { TitleHistoricalData } from "../../shared/ui/TitleHistoricalData"
 import { FooterContainer,  Main, MainContainer, PeriodsContainer } from "../Modules.styles"
 import { TechnologiesEventList } from "./TechnologiesEventList"
 

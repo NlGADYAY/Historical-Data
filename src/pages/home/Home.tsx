@@ -1,5 +1,5 @@
-import { Technologies } from "../../modules/mod_1_technologies"
-import { Sport } from "../../modules/mod_5_Sport"
+import { Technologies } from "../../modules/technologies"
+import { Sport } from "../../modules/sport"
 
 export const Home: React.FC = () => {
     return (

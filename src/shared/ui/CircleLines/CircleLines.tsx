@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react";
 import { CircleContainer, Circle, Dot } from "./CircleLines.styles";
 
 export const CircleLines: React.FC = () => {

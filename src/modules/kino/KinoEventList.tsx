@@ -1,4 +1,4 @@
-import { EventItem } from "../../shared/ui/eventItem";
+import { EventItem } from "../../shared/ui/EventItem";
 
 const events = [
   {
@@ -22,7 +22,7 @@ const events = [
   },
 ];
 
-export const ScienceventList: React.FC = () => {
+export const KinoEventList: React.FC = () => {
   return (
     <>
       {events.map((event, index) => (
