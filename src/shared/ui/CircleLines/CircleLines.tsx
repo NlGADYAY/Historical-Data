@@ -1,12 +1,17 @@
 import { CircleContainer, Circle, Dot } from "./CircleLines.styles";
 
-export const CircleLines: React.FC = () => {
-  const dots = 6
+type TCircleLines = {
+  dots: number;
+  radius: number;
+  center: number;
+};
 
-  const radius = 265;
-  const center = 265;
+export const CircleLines: React.FC<TCircleLines> = ({
+  dots = 6,
+  radius = 265,
+  center = 265,
+}) => {
   const dotsArray = Array.from({ length: dots });
-
 
   return (
     <CircleContainer>

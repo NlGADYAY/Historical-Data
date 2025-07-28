@@ -1,11 +1,9 @@
-import { Technologies } from "../../modules/technologies"
-import { Sport } from "../../modules/sport"
+import { HistoryDatties } from "../../modules"
 
 export const Home: React.FC = () => {
     return (
         <div>
-            <Technologies />
-            {/* <Sport /> */}
+            <HistoryDatties />
         </div>
     )
 }
