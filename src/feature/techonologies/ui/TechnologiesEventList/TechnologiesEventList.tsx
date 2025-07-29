@@ -1,12 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
-import { EventItem } from "../../shared/ui/EventItem";
-import {
-  Wrapper,
-  ScrollButtonLeft,
-  ScrollButtonRight,
-  ItemsRow,
-  ScrollContainer,
-} from "./Technologiies.styles";
+import { useHorizontalScroll } from "../../../../shared/hooks/useHorizontalScroll";
+import { EventItem } from "../../../../shared/ui/EventItem";
+import { Wrapper, ScrollButtonLeft, ScrollContainer, ItemsRow, ScrollButtonRight } from "./TechnologiiesEventList.styles";
 
 const events = [
   {
@@ -62,35 +56,7 @@ const events = [
 ];
 
 export const TechnologiesEventList: React.FC = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const update = () => {
-      setCanScrollLeft(el.scrollLeft > 0);
-      setCanScrollRight(el.scrollWidth - el.scrollLeft > el.clientWidth + 1);
-    };
-
-    update();
-    el.addEventListener("scroll", update);
-    window.addEventListener("resize", update);
-
-    return () => {
-      el.removeEventListener("scroll", update);
-      window.removeEventListener("resize", update);
-    };
-  }, []);
-
-  const scroll = (direction: "left" | "right") => {
-    ref.current?.scrollBy({
-      left: direction === "left" ? -350 : 350,
-      behavior: "smooth",
-    });
-  };
+   const { ref, canScrollLeft, canScrollRight, scroll } = useHorizontalScroll();
   return (
     <Wrapper>
       {canScrollLeft && (

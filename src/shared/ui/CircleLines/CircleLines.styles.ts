@@ -1,53 +1,62 @@
 import { styled } from "styled-components";
 
-export const CircleContainer = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-`;
+export const CircleContainer = styled('div')({
+  position: 'absolute',
+  width: '100%',
+  height: '100%',
+});
 
-export const Circle = styled.div`
-  width: 530px;
-  height: 530px;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transform-origin: center center;
+export const Circle = styled('div')({
+  width: '530px',
+  height: '530px',
+  borderRadius: '50%',
+  border: '1px solid #ccc',
+  position: 'relative',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  transformOrigin: 'center center',
+  '&::before': {
+    content: '""',
+    position: 'absolute',
+    backgroundColor: '#ccc',
+    width: '1px',
+    height: '1000px',
+    top: '-290px',
+    left: '50%',
+    transform: 'translateX(-50%)',
+  },
+  '&::after': {
+    content: '""',
+    position: 'absolute',
+    backgroundColor: '#ccc',
+    height: '1px',
+    width: '1440px',
+    top: '50%',
+    left: '-455px',
+    transform: 'translateY(-50%)',
+  },
+});
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    background-color: #ccc;
-  }
+export const Dot = styled('div')({
+  position: 'absolute',
+  width: '8px',
+  height: '8px',
+  backgroundColor: '#42567a',
+  borderRadius: '50%',
+  transform: 'translate(-50%, -50%)',
+    cursor: 'pointer', 
+  zIndex: 1
+});
 
-  /* Вертикальная линия */
-  &::before {
-    width: 1px;
-    height: 2000px;
-    top: -1000px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+export const DotWrapper = styled('div')({
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '530px',      
+  height: '530px',
+  transformOrigin: 'center center',
+  backgroundColor: 'rgba(0, 255, 0, 0.1)'
 
-  /* Горизонтальная линия */
-  &::after {
-    height: 1px;
-    width: 2000px;
-    top: 50%;
-    left: -1000px;
-    transform: translateY(-50%);
-  }
-`;
+});
 
-export const Dot = styled.div`
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background-color: #42567a;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-`;

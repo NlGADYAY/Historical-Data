@@ -1,0 +1,1 @@
+export { KinoEventList } from './KinoEventList'

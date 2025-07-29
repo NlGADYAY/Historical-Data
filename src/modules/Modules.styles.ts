@@ -1,33 +1,32 @@
-import styled from "styled-components";
+import { styled } from 'styled-components';
 
-export const Main = styled.div`
-  margin-inline: 220px;
-  height: 1000px;
-  width: 1440px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  border-inline: 1px solid #ccc;
-`;
+export const Main = styled('div')({
+  marginInline: '220px',
+  height: '850px',
+  width: '1440px',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  position: 'relative',
+  borderInline: '1px solid #ccc',
+});
 
-export const MainContainer = styled.div`
-  height: 800px;  
-  width: 100%;
-  z-index: 1;
-`;
+export const MainContainer = styled('div')({
+  height: '800px',
+  width: '100%',
+  zIndex: 1,
+});
 
-export const FooterContainer = styled.div`
-  display: flex;
-  gap: 16px;
-  z-index: 1;
-`;
+export const FooterContainer = styled('div')({
+  display: 'flex',
+  gap: '16px',
+  zIndex: 1,
+});
 
-export const PeriodsContainer = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 8px 16px;
-`;
-
+export const PeriodsContainer = styled('div')({
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  padding: '8px 16px',
+});
