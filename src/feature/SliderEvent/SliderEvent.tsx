@@ -1,4 +1,4 @@
-import { Selector, SliderCounter } from "./SliderEvent.styles";
+import { Counter, NavButton, Selector, SliderCounter } from "./SliderEvent.styles";
 
 const formatNumber = (num: number, total: number) =>
   num.toString().padStart(total >= 10 ? 2 : 1, "0");
@@ -8,7 +8,7 @@ type TSliderEvent = {
   setActiveIndex: (index: number) => void;
   total: number;
   sliders: { index: number; element: React.ReactNode }[];
-}
+};
 
 export const SliderEvent: React.FC<TSliderEvent> = ({
   activeIndex,
@@ -16,29 +16,34 @@ export const SliderEvent: React.FC<TSliderEvent> = ({
   total,
   sliders,
 }) => {
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setActiveIndex(Number(e.target.value));
+  const currentSlider = sliders.find((s) => s.index === activeIndex);
+
+  const handlePrev = () => {
+    if (activeIndex > 1) {
+      setActiveIndex(activeIndex - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (activeIndex < total) {
+      setActiveIndex(activeIndex + 1);
+    }
   };
 
   return (
     <div>
+        <Counter>
+          {formatNumber(activeIndex, total)} / {formatNumber(total, total)}
+        </Counter>
       <SliderCounter>
-        <Selector value={activeIndex} onChange={handleChange}>
-          {Array.from({ length: total }).map((_, i) => {
-            const value = i + 1;
-            return (
-              <option key={value} value={value}>
-                {formatNumber(value, total)}
-              </option>
-            );
-          })}
-        </Selector>
-        /{formatNumber(total, total)}
+      <NavButton onClick={handlePrev} disabled={activeIndex === 1}>
+        ❮
+      </NavButton>
+      <NavButton onClick={handleNext} disabled={activeIndex === total}>
+        ❯
+      </NavButton>
       </SliderCounter>
-
-      {sliders.map(({ index, element }) =>
-        index === activeIndex ? <div key={index}>{element}</div> : null
-      )}
+      {currentSlider && <div>{currentSlider.element}</div>}
     </div>
   );
 };

@@ -6,7 +6,7 @@ export const SliderCounter = styled('div') ({
   gap: '8px',
   marginBottom: '16px',
   fontSize: '16px',
-  color:' #42567a'
+
 })
 
 export const Selector = styled('select')({
@@ -17,7 +17,34 @@ export const Selector = styled('select')({
   cursor: 'pointer',
   fontWeight: 'bold',
 
-//   &:focus {
-//     outline: none;
-//   }
+
+});
+export const NavButton = styled("button")({
+  width: "40px",
+  height: "40px",
+  background: "none",
+  border: "1px solid #42567A", 
+  fontSize: "20px",
+  color: "#42567A",
+  cursor: "pointer",
+  borderRadius: "50%", 
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  transition: "opacity 0.2s",
+
+  "&:disabled": {
+    opacity: 0.3,
+    cursor: "not-allowed",
+  },
+
+  "&:hover:not(:disabled)": {
+    backgroundColor: "#F9FAFB",
+  },
+});
+
+export const Counter = styled('span') ({
+  fontSize: '18x',
+  color: '#42567A',
+  fontFamily: "'PT Sans'",
 })

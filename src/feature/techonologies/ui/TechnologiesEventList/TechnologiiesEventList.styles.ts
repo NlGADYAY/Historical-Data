@@ -3,6 +3,13 @@ import styled from "styled-components";
 export const Wrapper = styled("div")({
   position: "relative",
   width: "1400px",
+  marginBottom: '104px',
+
+  "@media (max-width: 320px)": {
+    width: "100%",
+    marginBottom: "64px",
+    paddingInline: "12px",
+  },
 });
 
 export const ScrollContainer = styled("div")({
@@ -16,20 +23,26 @@ export const ScrollContainer = styled("div")({
   "&::-webkit-scrollbar": {
     display: "none",
   },
+
+  "@media (max-width: 320px)" : {
+  display: "block",
+  width: '280px'
+    
+  }
 });
 
 export const ItemsRow = styled("div")({
   display: "flex",
   gap: "50px",
   padding: "10px",
-  height: "135px",
+  height: "100%",
 });
 
 export const ScrollButton = styled("ScrollButtonBase");
 
 export const ScrollButtonLeft = styled("button")({
   position: "absolute",
-  background: "rgba(255, 255, 255, 1)",
+  background: "#FFFFFF",
   color: "blue",
   top: "50%",
   transform: "translateY(-50%)",

@@ -60,7 +60,7 @@ export const TechnologiesEventList: React.FC = () => {
   return (
     <Wrapper>
       {canScrollLeft && (
-        <ScrollButtonLeft onClick={() => scroll("left")}>←</ScrollButtonLeft>
+        <ScrollButtonLeft onClick={() => scroll("left")}>❮</ScrollButtonLeft>
       )}
 
       <ScrollContainer ref={ref}>
@@ -76,7 +76,7 @@ export const TechnologiesEventList: React.FC = () => {
       </ScrollContainer>
 
       {canScrollRight && (
-        <ScrollButtonRight onClick={() => scroll("right")}>→</ScrollButtonRight>
+        <ScrollButtonRight onClick={() => scroll("right")}>❯</ScrollButtonRight>
       )}
     </Wrapper>
   );

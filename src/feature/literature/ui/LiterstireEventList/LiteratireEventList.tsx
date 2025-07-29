@@ -1,6 +1,6 @@
 import { useHorizontalScroll } from "../../../../shared/hooks/useHorizontalScroll";
 import { EventItem } from "../../../../shared/ui/EventItem";
-import { Wrapper, ScrollButtonLeft, ScrollContainer, ItemsRow, ScrollButtonRight } from "./SportEventList.styles";
+import { Wrapper, ScrollButtonLeft, ScrollContainer, ItemsRow, ScrollButtonRight } from "./LiteratireEventList.styles";
 
 const events = [
   {
@@ -24,7 +24,7 @@ const events = [
   },
 ];
 
-export const SportEventList: React.FC = () => {
+export const LiteratireEventList: React.FC = () => {
  const { ref, canScrollLeft, canScrollRight, scroll } = useHorizontalScroll();
   return (
     <Wrapper>

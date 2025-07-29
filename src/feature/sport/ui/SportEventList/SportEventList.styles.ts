@@ -22,7 +22,7 @@ export const ItemsRow = styled("div")({
   display: "flex",
   gap: "50px",
   padding: "10px",
-  height: "135px",
+  height: "100%",
 });
 
 export const ScrollButton = styled("ScrollButtonBase");
