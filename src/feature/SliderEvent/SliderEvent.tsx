@@ -48,7 +48,7 @@ export const SliderEvent: React.FC<TSliderEvent> = ({
           <NavButton onClick={handlePrev} disabled={activeIndex === 1}>
             <ArrowRightGray color="#42567A"/>
           </NavButton>
-          <NavButton onClick={handleNext} disabled={activeIndex === total}>
+          <NavButton onClick={handleNext} disabled={activeIndex === total} >
           <ArrowLeftGray />
           </NavButton>
         </SliderCounter>

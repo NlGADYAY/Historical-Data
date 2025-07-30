@@ -1,6 +1,5 @@
-
-import { ArrowRightBlue } from "../../../../../shared/icons/ArrowRightBlue/ArrowRightBlue";
-import { TemplateEventList } from "../../../../../shared/ui/Template/Template";
+import { ArrowRightBlue } from "../../../../shared/icons/ArrowRightBlue/ArrowRightBlue";
+import { TemplateEventList } from "../../../../shared/ui/Template/Template";
 
 const events = [
   {

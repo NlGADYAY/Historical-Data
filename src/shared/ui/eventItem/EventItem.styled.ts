@@ -4,7 +4,7 @@ export const EventItemConteiner = styled("div")({
   minWidth: "350px",
 
   "@media (max-width: 320px)": {
-    minWidth: "auto",
+    minWidth: "250px",
   },
 });
 
@@ -28,7 +28,6 @@ export const EventDescription = styled("div")({
 
   "@media (max-width: 320px)": {
     fontSize: "14px",
-    width: '170px',
     height: '80px',
 
   },

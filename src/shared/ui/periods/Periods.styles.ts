@@ -3,9 +3,11 @@ import { styled } from "styled-components";
 export const PeriodBefore = styled('span')({
   marginRight: '20px', 
   fontSize: '200px',
+  zIndex: 2,
   color: '#5D5FEF',
   fontFamily: "'PT Sans'",
   fontWeight: 'bold',
+  
     "@media (max-width: 320px)" : {
     fontSize: "56px",
     padding:0,
@@ -17,6 +19,7 @@ export const PeriodAfter = styled('span')({
   marginLeft: '20px',
   paddingLeft: '50px',
   fontSize: '200px',
+  zIndex: 2,
   fontFamily: "'PT Sans'",
   fontWeight: 'bold',
   color: '#EF5DA8',

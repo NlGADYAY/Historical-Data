@@ -4,14 +4,15 @@ import { Kino } from "../entites/kino/ui/KinoTimeline";
 import { Sport } from "../entites/sport/ui/SportTimeline";
 import { Technologies } from "../entites/technologies/ui/TechnologiesTimeline";
 import { SliderEvent } from "../feature/SliderEvent";
-import { SportEventList } from "../feature/models/sport/ui/SportEventList";
-import { TechnologiesEventList } from "../feature/models/techonologies/ui/TechnologiesEventList";
 import { CircleLines } from "../shared/ui/CircleLines";
 import { Literature } from "../entites/literature/ui/LiterstureTimeline/Literature";
 import { Science } from "../entites/science/ui/ScienceTimeline/Science";
-import { KinoEventList } from "../feature/KinoEventList";
-import { LiteratireEventList } from "../feature/models/literature/ui/LiterstireEventList";
-import { ScienceEventList } from "../feature/models/science/ui/ScinceEventList";
+import { KinoEventList } from "../feature/kino/ui/KinoEventList";
+import { LiteratireEventList } from "../feature/literature/ui/LiterstireEventList";
+import { ScienceEventList } from "../feature/science/ui/ScinceEventList";
+import { SportEventList } from "../feature/sport/ui/SportEventList";
+import { TechnologiesEventList } from "../feature/techonologies/ui/TechnologiesEventList";
+import { DotsLayer } from "../shared/ui/ModuleDot";
 
 const SLIDER_MAP = {
   1: TechnologiesEventList,
@@ -42,9 +43,14 @@ export const HistoryDatties: React.FC = () => {
 
   return (
     <Main>
-      <CircleLines  />
+      <DotsLayer
+        dots={5}
+        radius={265}
+        center={265}
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex} />
+      <CircleLines />
       <MainContainer>
-
         {TIME_LINE_MAP[activeIndex]}
       </MainContainer>
       <FooterContainer>

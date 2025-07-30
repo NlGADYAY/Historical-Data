@@ -1,14 +1,6 @@
-import { useHorizontalScroll } from "../../../../../shared/hooks/useHorizontalScroll";
-import { ArrowRightBlue } from "../../../../../shared/icons/ArrowRightBlue/ArrowRightBlue";
-import { EventItem } from "../../../../../shared/ui/EventItem";
-import { TemplateEventList } from "../../../../../shared/ui/Template/Template";
-import {
-  Wrapper,
-  ScrollButtonLeft,
-  ScrollContainer,
-  ItemsRow,
-  ScrollButtonRight,
-} from "../../../Models.styles";
+import { ArrowRightBlue } from "../../../../shared/icons/ArrowRightBlue/ArrowRightBlue";
+import { TemplateEventList } from "../../../../shared/ui/Template/Template";
+
 const events = [
   {
     data: 1987,

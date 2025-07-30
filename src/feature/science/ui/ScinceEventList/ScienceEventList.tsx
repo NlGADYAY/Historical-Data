@@ -1,5 +1,5 @@
-import { ArrowRightBlue } from "../../../../../shared/icons/ArrowRightBlue/ArrowRightBlue";
-import { TemplateEventList } from "../../../../../shared/ui/Template/Template";
+import { ArrowRightBlue } from "../../../../shared/icons/ArrowRightBlue/ArrowRightBlue";
+import { TemplateEventList } from "../../../../shared/ui/Template/Template";
 
 const events = [
   {
@@ -23,7 +23,7 @@ const events = [
   },
 ];
 
-export const SportEventList: React.FC = () => {
+export const ScienceEventList: React.FC = () => {
   return (
     <TemplateEventList
       events={events}

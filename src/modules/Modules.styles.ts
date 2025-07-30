@@ -19,12 +19,14 @@ export const Main = styled('div')({
     margin: 0
 }});
 
+
 export const MainContainer = styled('div')({
-  height: '80%',
-  width: '100%',
-  zIndex: 1,
+  height: '700px',
+  width: '1440px',
+  zIndex: 2,
 
   "@media (max-width: 320px)": {
+    width: '320px',
     height: '50%',
   }
 });
@@ -32,8 +34,7 @@ export const MainContainer = styled('div')({
 export const FooterContainer = styled('div')({
   display: 'flex',
   gap: '16px',
-  zIndex: 1,
-
+  height:'150px',
   "@media (max-width: 320px)": {
     height: '50%',
     flexDirection: 'column',
@@ -47,6 +48,7 @@ export const PeriodsContainer = styled('div')({
   left: '50%',
   transform: 'translate(-50%, -50%)',
   padding: '8px 16px',
+  zIndex: 2,
 
   "@media (max-width: 320px)": {
     position: 'relative',

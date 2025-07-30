@@ -13,7 +13,8 @@ export const SliderNavigate = styled("div")({
     order: 1,
     width: '50px',
     height: '59px',
-    marginLeft: '60px'
+    marginLeft: '60px',
+    paddingTop: '40px'
   },
 });
 
@@ -23,9 +24,10 @@ export const SliderCounter = styled("div")({
   gap: "8px",
   marginBottom: "16px",
   fontSize: "16px",
+  pointerEvents: 'auto',
 
   "@media (max-width: 320px)" : {
-
+    width: '100px',
   }
 });
 
@@ -54,9 +56,11 @@ export const NavButton = styled("button")({
   cursor: "pointer",
   borderRadius: "50%",
   display: "flex",
+  zIndex: 2,
   alignItems: "center",
   justifyContent: "center",
   transition: "opacity 0.2s",
+ 
 
   "&:disabled": {
     opacity: 0.3,
@@ -70,7 +74,6 @@ export const NavButton = styled("button")({
     width: "25px",
     height: "25px",
     borderRadius: "50%",
-
   },
 });
 
@@ -78,4 +81,8 @@ export const Counter = styled("span")({
   fontSize: "18x",
   color: "#42567A",
   fontFamily: "'PT Sans'",
+
+"@media (max-width: 320px)" : {
+  paddingBottom: '16px'
+}
 });
