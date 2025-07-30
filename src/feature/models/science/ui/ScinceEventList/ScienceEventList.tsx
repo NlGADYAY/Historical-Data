@@ -1,15 +1,14 @@
-import { useHorizontalScroll } from "../../shared/hooks/useHorizontalScroll";
-import { ArrowRightBlue } from "../../shared/icons/ArrowRightBlue/ArrowRightBlue";
-import { EventItem } from "../../shared/ui/EventItem";
-import { TemplateEventList } from "../../shared/ui/Template/Template";
+import { useHorizontalScroll } from "../../../../../shared/hooks/useHorizontalScroll";
+import { ArrowRightBlue } from "../../../../../shared/icons/ArrowRightBlue/ArrowRightBlue";
+import { EventItem } from "../../../../../shared/ui/EventItem";
+import { TemplateEventList } from "../../../../../shared/ui/Template/Template";
 import {
   Wrapper,
   ScrollButtonLeft,
   ScrollContainer,
   ItemsRow,
   ScrollButtonRight,
-} from "../models/Models.styles";
-
+} from "../../../Models.styles";
 const events = [
   {
     data: 1987,
@@ -32,7 +31,7 @@ const events = [
   },
 ];
 
-export const KinoEventList: React.FC = () => {
+export const ScienceEventList: React.FC = () => {
   return (
     <TemplateEventList
       events={events}

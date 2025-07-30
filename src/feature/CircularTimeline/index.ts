@@ -1,1 +1,0 @@
-export { CircularTimeline } from './CircularTimeline'

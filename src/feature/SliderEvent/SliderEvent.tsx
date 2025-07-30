@@ -1,4 +1,12 @@
-import { Counter, NavButton, Selector, SliderCounter } from "./SliderEvent.styles";
+import { ArrowLeftGray } from "../../shared/icons/ArrowLeftGray/ArrowLeftGray";
+import { ArrowRightGray } from "../../shared/icons/ArrowRightGray/ArrowRightGray";
+import {
+  Counter,
+  NavButton,
+  SliderConteiner,
+  SliderCounter,
+  SliderNavigate,
+} from "./SliderEvent.styles";
 
 const formatNumber = (num: number, total: number) =>
   num.toString().padStart(total >= 10 ? 2 : 1, "0");
@@ -31,19 +39,21 @@ export const SliderEvent: React.FC<TSliderEvent> = ({
   };
 
   return (
-    <div>
+    <SliderConteiner>
+      <SliderNavigate>
         <Counter>
           {formatNumber(activeIndex, total)} / {formatNumber(total, total)}
         </Counter>
-      <SliderCounter>
-      <NavButton onClick={handlePrev} disabled={activeIndex === 1}>
-        ❮
-      </NavButton>
-      <NavButton onClick={handleNext} disabled={activeIndex === total}>
-        ❯
-      </NavButton>
-      </SliderCounter>
+        <SliderCounter>
+          <NavButton onClick={handlePrev} disabled={activeIndex === 1}>
+            <ArrowRightGray color="#42567A"/>
+          </NavButton>
+          <NavButton onClick={handleNext} disabled={activeIndex === total}>
+          <ArrowLeftGray />
+          </NavButton>
+        </SliderCounter>
+      </SliderNavigate>
       {currentSlider && <div>{currentSlider.element}</div>}
-    </div>
+    </SliderConteiner>
   );
 };

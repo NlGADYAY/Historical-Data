@@ -1,9 +1,9 @@
-import { CircleContainer, Circle, Dot } from "./CircleLines.styles";
+import { CircleContainer, Circle, Dot, DotWrapper } from "./CircleLines.styles";
 
 type TCircleLines = {
-  dots: number;
-  radius: number;
-  center: number;
+  dots?: number;
+  radius?: number;
+  center?: number;
 };
 
 export const CircleLines: React.FC<TCircleLines> = ({
@@ -15,7 +15,8 @@ export const CircleLines: React.FC<TCircleLines> = ({
 
   return (
     <CircleContainer>
-      <Circle>
+      <Circle />
+      <DotWrapper>
         {dotsArray.map((_, i) => {
           const angle = (2 * Math.PI * i) / dots;
           const x = center + radius * Math.cos(angle);
@@ -31,7 +32,7 @@ export const CircleLines: React.FC<TCircleLines> = ({
             />
           );
         })}
-      </Circle>
+      </DotWrapper>
     </CircleContainer>
   );
 };

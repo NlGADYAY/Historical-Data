@@ -24,6 +24,8 @@ export const HistoricalData = styled("div")({
     fontWeight: "bold",
     color: "#42567A",
     fontSize: "20px",
+    width: '123px',
+    paddingLeft: '30px',
     " &::before": {
       display: "none",
     },

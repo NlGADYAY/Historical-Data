@@ -4,12 +4,13 @@ import {
   EventItemConteiner,
 } from "./EventItem.styled";
 
-type TEventItem = {
+export type TEventItem = {
   data: number;
   description: string;
+  faded?: boolean
 };
 
-export const EventItem: React.FC<TEventItem> = ({ data, description }) => {
+export const EventItem: React.FC<TEventItem> = ({ data, description, faded }) => {
   return (
     <EventItemConteiner>
       <EventData>{data}</EventData>

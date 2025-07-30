@@ -1,6 +1,6 @@
-import { useHorizontalScroll } from "../../../../shared/hooks/useHorizontalScroll";
-import { EventItem } from "../../../../shared/ui/EventItem";
-import { Wrapper, ScrollButtonLeft, ScrollContainer, ItemsRow, ScrollButtonRight } from "./TechnologiiesEventList.styles";
+
+import { ArrowRightBlue } from "../../../../../shared/icons/ArrowRightBlue/ArrowRightBlue";
+import { TemplateEventList } from "../../../../../shared/ui/Template/Template";
 
 const events = [
   {
@@ -56,28 +56,11 @@ const events = [
 ];
 
 export const TechnologiesEventList: React.FC = () => {
-   const { ref, canScrollLeft, canScrollRight, scroll } = useHorizontalScroll();
   return (
-    <Wrapper>
-      {canScrollLeft && (
-        <ScrollButtonLeft onClick={() => scroll("left")}>❮</ScrollButtonLeft>
-      )}
-
-      <ScrollContainer ref={ref}>
-        <ItemsRow>
-          {events.map((event, index) => (
-            <EventItem
-              key={index}
-              data={event.data}
-              description={event.description}
-            />
-          ))}
-        </ItemsRow>
-      </ScrollContainer>
-
-      {canScrollRight && (
-        <ScrollButtonRight onClick={() => scroll("right")}>❯</ScrollButtonRight>
-      )}
-    </Wrapper>
+    <TemplateEventList
+      events={events}
+      leftButtonContent={"❮"}
+      rightButtonContent={<ArrowRightBlue />}
+    />
   );
 };

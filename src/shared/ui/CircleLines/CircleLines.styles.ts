@@ -36,20 +36,25 @@ export const Circle = styled("div")({
     left: "-455px",
     transform: "translateY(-50%)",
   },
-
   "@media (max-width: 320px)": {
-    display: 'none',
+    width: "280px",
+    height: "1px",
+    border: "none",
+    borderRadius: "0",
+    backgroundColor: "#ccc",
+
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+
     "&::after": {
-      content: '""',
-      position: "absolute",
-      backgroundColor: "#ccc",
-      width: "280px",
-      top: '50%',
-      transform: "translateY(-50%)",
+      display: "none",
     },
-    ' &::before': {
-    display: 'none'
-  }
+
+    "&::before": {
+      display: "none",
+    },
   },
 });
 
@@ -62,6 +67,12 @@ export const Dot = styled("div")({
   transform: "translate(-50%, -50%)",
   cursor: "pointer",
   zIndex: 1,
+
+  "@media (max-width: 320px)": {
+    position: "static",
+    transform: "none",
+    margin: "0 4px",
+  },
 });
 
 export const DotWrapper = styled("div")({
@@ -71,4 +82,16 @@ export const DotWrapper = styled("div")({
   width: "530px",
   height: "530px",
   transformOrigin: "center center",
+
+  "@media (max-width: 320px)": {
+    position: "static",
+    width: "100%",
+    height: "auto",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexWrap: "wrap",
+    gap: "10px",
+    marginTop: "530px",
+  },
 });

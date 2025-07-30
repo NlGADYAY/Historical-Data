@@ -3,39 +3,38 @@ import { Main, MainContainer, FooterContainer } from "./Modules.styles";
 import { Kino } from "../entites/kino/ui/KinoTimeline";
 import { Sport } from "../entites/sport/ui/SportTimeline";
 import { Technologies } from "../entites/technologies/ui/TechnologiesTimeline";
-import { CircularTimeline } from "../feature/CircularTimeline";
-import { KinoEventList } from "../feature/kino/ui/KinoEventList";
 import { SliderEvent } from "../feature/SliderEvent";
-import { SportEventList } from "../feature/sport/ui/SportEventList";
-import { TechnologiesEventList } from "../feature/techonologies/ui/TechnologiesEventList";
+import { SportEventList } from "../feature/models/sport/ui/SportEventList";
+import { TechnologiesEventList } from "../feature/models/techonologies/ui/TechnologiesEventList";
 import { CircleLines } from "../shared/ui/CircleLines";
-import { ScienceEventList } from "../feature/science/ui/ScinceEventList";
-import { LiteratireEventList } from "../feature/literature/ui/LiterstireEventList";
 import { Literature } from "../entites/literature/ui/LiterstureTimeline/Literature";
 import { Science } from "../entites/science/ui/ScienceTimeline/Science";
+import { KinoEventList } from "../feature/KinoEventList";
+import { LiteratireEventList } from "../feature/models/literature/ui/LiterstireEventList";
+import { ScienceEventList } from "../feature/models/science/ui/ScinceEventList";
 
-const AllSliders = {
+const SLIDER_MAP = {
   1: TechnologiesEventList,
   2: SportEventList,
   3: KinoEventList,
   4: ScienceEventList,
   5: LiteratireEventList
-};
+} as const;
 
-const AllTimeline: Record<number, React.FC> = {
-  1: Technologies,
-  2: Sport,
-  3: Kino,
-  4: Science,
-  5: Literature
-};
+const TIME_LINE_MAP: Record<number, React.ReactNode> = {
+  1: <Technologies />,
+  2: <Sport />,
+  3: <Kino />,
+  4: <Science />,
+  5: <Literature />
+} as const;
 
 export const HistoryDatties: React.FC = () => {
-  const total = Object.keys(AllSliders).length;
+  const total = Object.keys(SLIDER_MAP).length;
   const [activeIndex, setActiveIndex] = useState(1);
 
   const sliders = useMemo(() => {
-    return Object.entries(AllSliders).map(([index, Component]) => ({
+    return Object.entries(SLIDER_MAP).map(([index, Component]) => ({
       index: Number(index),
       element: <Component key={index} />,
     }));
@@ -43,12 +42,10 @@ export const HistoryDatties: React.FC = () => {
 
   return (
     <Main>
-      <CircleLines dots={6} radius={265} center={265} />
+      <CircleLines  />
       <MainContainer>
-        <CircularTimeline
-          activeIndex={activeIndex}
-          Component={AllTimeline[activeIndex]}
-        />
+
+        {TIME_LINE_MAP[activeIndex]}
       </MainContainer>
       <FooterContainer>
         <SliderEvent
