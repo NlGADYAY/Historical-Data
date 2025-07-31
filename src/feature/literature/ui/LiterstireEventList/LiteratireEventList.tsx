@@ -1,3 +1,4 @@
+import { ArrowLeftBlue } from "@shared/icons/ArrowLeftBlue";
 import { ArrowRightBlue } from "@shared/icons/ArrowRightBlue/ArrowRightBlue";
 import { TemplateEventList } from "@shared/ui/Template/Template";
 
@@ -27,7 +28,7 @@ export const LiteratireEventList: React.FC = () => {
   return (
     <TemplateEventList
       events={events}
-      leftButtonContent={"❮"}
+      leftButtonContent={<ArrowLeftBlue />}
       rightButtonContent={<ArrowRightBlue />}
     />
   );

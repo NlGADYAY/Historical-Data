@@ -32,19 +32,8 @@ export const MainContainer = styled("div")({
   },
 });
 
-export const FooterContainer = styled("div")({
-  display: "flex",
-  gap: "16px",
-  height: "150px",
-  "@media (max-width: 320px)": {
-    height: "50%",
-    flexDirection: "column",
-    gap: "8px",
-  },
-});
 
-
-export const Test = styled('div') ({
+export const PositionPeriod = styled('div') ({
   position: "absolute",
   top: "50%",
   left: "50%",
@@ -56,11 +45,24 @@ export const Test = styled('div') ({
   "@media (max-width: 320px)": {
     position: "relative",
     padding: "8px 8px",
+    marginLeft: '20px',
     width: "284px",
     height: "75px",
-    top: "50%",
+    top: "25%",
     left: "50%",
     transform: "translate(-50%, -50%)",
   },
-})
+});
+
+export const FooterContainer = styled("div")({
+  display: "flex",
+  gap: "16px",
+  height: "150px",
+  "@media (max-width: 320px)": {
+    height: "50%",
+    flexDirection: "column",
+    gap: "8px",
+  },
+});
+
 

@@ -1,4 +1,4 @@
-import { AnimatedNumber } from "../animation/animateNumber";
+import { AnimatedNumber } from "feature/animation/animateNumber";
 import { PeriodAfter, PeriodBefore } from "./Periods.styles";
 
 type TPeriods = {

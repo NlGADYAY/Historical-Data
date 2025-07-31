@@ -1,48 +1,5 @@
 import styled from "styled-components";
 
-export const Dot = styled("button")<{
-  isActive?: boolean;
-  angleDeg?: number;
-}>(({ isActive, angleDeg = 0 }) => ({
-  position: "absolute",
-  width: isActive ? "56px" : "8px",
-  height: isActive ? "56px" : "8px",
-  backgroundColor: isActive ? "#e9e8e892" : "#ccc",
-  borderRadius: "50%",
-  transform: "translate(-50%, -50%)",
-  cursor: "pointer",
-  zIndex: 1,
-  border: isActive ? "1px solid #42567A" : "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  transition: "all 0.3s ease",
-
-  "& .dot-label": {
-    color: "#42567A",
-    fontSize: "20px",
-    fontWeight: "bold",
-    transform: `rotate(${angleDeg}deg)`,
-    pointerEvents: "none",
-  },
-
-  "@media (max-width: 320px)": {
-    position: "static",
-    transform: "none",
-    backgroundColor: isActive ? "#3c4d6eff" : "#ccc",
-    margin: "0 4px",
-    width: isActive ? "10px" : "8px",
-    height: isActive ? "10px" : "8px",
-
-    "& .dot-label": {
-      transform: "none",
-      fontSize: "0",
-    },
-  },
-}));
-
-
-
 export const DotWrapper = styled("div")({
   position: "absolute",
   top: "50%",
@@ -73,5 +30,47 @@ export const DotWrapper = styled("div")({
     gap: "8px",
     padding: "8px",
     zIndex: 100,
+    
   },
 });
+
+export const Dot = styled("button")<{ isActive?: boolean, isHovered: boolean }>(({ isActive, isHovered }) => ({
+  position: "absolute",
+  width: isActive ? "56px" : "8px",
+  height: isActive ? "56px" : "8px",
+  backgroundColor: isActive ? "#e9e8e8c9" : "#ccc",
+  borderRadius: "50%",
+  transform: "translate(-50%, -50%)",
+  cursor: "pointer",
+  zIndex: 1,
+  border: isActive ? "2px solid #42567A" : "none",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  transition: "all 0.3s ease",
+  color: "#42567A",
+  fontSize: "16px",
+  fontWeight: "bold",
+  pointerEvents: "auto",
+
+    ...(!isActive && isHovered && {
+    width: "56px",
+    height: "56px",
+    backgroundColor: "#e9e8e8c9",
+    border: "2px solid #42567A",
+    color: "#42567A",
+    fontSize: "16px",
+    fontWeight: "bold",
+  }),
+
+  "@media (max-width: 320px)": {
+    position: "static",
+    transform: "none",
+    backgroundColor: isActive ? "#3c4d6eff" : "#ccc",
+    margin: "0 4px",
+    width: isActive ? "10px" : "8px",
+    height: isActive ? "10px" : "8px",
+    fontSize: "0",
+    border: isActive ? "none" : "none",
+  },
+}));

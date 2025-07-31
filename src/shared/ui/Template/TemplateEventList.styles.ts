@@ -7,7 +7,8 @@ export const Wrapper = styled("div")({
 
   "@media (max-width: 320px)": {
     width: "100%",
-    marginBottom: "64px",
+    marginTop: "30px",
+
   },
 });
 

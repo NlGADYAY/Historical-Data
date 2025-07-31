@@ -9,7 +9,7 @@ import { SliderEvent } from "feature/SliderEvent";
 import { SportEventList } from "feature/sport/ui/SportEventList";
 import { TechnologiesEventList } from "feature/techonologies/ui/TechnologiesEventList";
 import { useState, useMemo } from "react";
-import { Main, MainContainer, Test, FooterContainer } from "./HistoryDatties.styles";
+import { Main, MainContainer, PositionPeriod, FooterContainer } from "./HistoryDatties.styles";
 
 const SLIDER_MAP = {
   1: TechnologiesEventList,
@@ -50,12 +50,12 @@ export const HistoryDatties: React.FC = () => {
       <CircleLines />
       <MainContainer>
         <TitleHistoricalData />
-        <Test>
+        <PositionPeriod>
         <Periods
           dataBefore={PERIODS_DATA[activeIndex].before}
           dataAfter={PERIODS_DATA[activeIndex].after}
         />
-        </Test>
+        </PositionPeriod>
       </MainContainer>
       <FooterContainer>
         <SliderEvent
