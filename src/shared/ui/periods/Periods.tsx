@@ -1,3 +1,4 @@
+import { AnimatedNumber } from "../animation/animateNumber";
 import { PeriodAfter, PeriodBefore } from "./Periods.styles";
 
 type TPeriods = {
@@ -8,8 +9,12 @@ type TPeriods = {
 export const Periods: React.FC<TPeriods> = ({ dataBefore, dataAfter }) => {
   return (
     <div>
-      <PeriodBefore>{dataBefore}</PeriodBefore>
-      <PeriodAfter>{dataAfter}</PeriodAfter>
+      <PeriodBefore>
+        <AnimatedNumber value={dataBefore}></AnimatedNumber>
+      </PeriodBefore>
+      <PeriodAfter>
+        <AnimatedNumber value={dataAfter}></AnimatedNumber>
+      </PeriodAfter>
     </div>
   );
 };

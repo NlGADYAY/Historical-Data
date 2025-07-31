@@ -24,7 +24,7 @@ export const Circle = styled("div")({
     position: "absolute",
     backgroundColor: "#ccc",
     width: "1px",
-    height: "1000px",
+    height: "1080px",
     top: "-280px",
     left: "50%",
     transform: "translateX(-50%)",

@@ -1,1 +1,0 @@
-export { Kino } from './Kino'

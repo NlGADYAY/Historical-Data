@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled("div")({
   position: "relative",
   width: "1400px",
-  marginBottom: "104px",
+  marginTop: "104px",
 
   "@media (max-width: 320px)": {
     width: "100%",

@@ -1,11 +1,11 @@
-import { ArrowLeftGray } from "../../shared/icons/ArrowLeftGray/ArrowLeftGray";
-import { ArrowRightGray } from "../../shared/icons/ArrowRightGray/ArrowRightGray";
+import { ArrowLeftGray } from "@shared/icons/ArrowLeftGray/ArrowLeftGray";
+import { ArrowRightGray } from "@shared/icons/ArrowRightGray/ArrowRightGray";
 import {
-  Counter,
-  NavButton,
   SliderConteiner,
-  SliderCounter,
   SliderNavigate,
+  Counter,
+  SliderCounter,
+  NavButton,
 } from "./SliderEvent.styles";
 
 const formatNumber = (num: number, total: number) =>
@@ -46,10 +46,10 @@ export const SliderEvent: React.FC<TSliderEvent> = ({
         </Counter>
         <SliderCounter>
           <NavButton onClick={handlePrev} disabled={activeIndex === 1}>
-            <ArrowRightGray color="#42567A"/>
+            <ArrowRightGray color="#42567A" />
           </NavButton>
-          <NavButton onClick={handleNext} disabled={activeIndex === total} >
-          <ArrowLeftGray />
+          <NavButton onClick={handleNext} disabled={activeIndex === total}>
+            <ArrowLeftGray />
           </NavButton>
         </SliderCounter>
       </SliderNavigate>

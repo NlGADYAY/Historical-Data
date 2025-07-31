@@ -1,1 +1,0 @@
-export {Literature} from './Literature'
